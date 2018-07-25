@@ -78,16 +78,17 @@
     			echo"Website: {$_POST["Website"]}<br>";
     			echo"Comment: {$_POST["Comment"]}<br>";
     			
-    			$emailTo = "c.scheidler@gmx.net";
+    			$emailTo = "toreceipant@gmx.com";
     			$subject = "Contact Form";
     			$body = "User: ".$_POST["Name"]." with email: ".$_POST["Email"].", gender: ".$_POST["Gender"].", website: ".$_POST["Website"]." added the following comment:<br>".$_POST["Comment"];
-    			$sender = "From: scheidler.mb@gmail.com";
+    			$sender = "From: from@mail.com";
     			
     			if(mail($emailTo, $subject, $body, $sender)){
     				echo "Mail sent successfully!";
     			} else {
     				echo "Mail not sent!";
     			}
+    			
     	} else {
     		echo "<h2 class='Error'>Please complete and correct your form.</h2>";
     	}
